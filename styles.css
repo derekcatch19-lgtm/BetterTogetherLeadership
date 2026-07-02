@@ -406,10 +406,15 @@ a {
 }
 
 .card-grid,
-.resource-grid,
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -503,6 +508,113 @@ a {
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   box-shadow: 0 10px 30px rgba(7, 26, 51, 0.06);
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resource-card .button {
+  width: fit-content;
+  margin-top: auto;
+}
+
+.resource-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 34px;
+  padding: 6px 10px;
+  color: var(--white);
+  background: var(--navy);
+  border-radius: var(--radius);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.resource-status {
+  width: fit-content;
+  margin: 0;
+  padding: 4px 8px;
+  color: var(--navy);
+  background: var(--carolina-soft);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tool-library {
+  margin-top: 42px;
+  padding-top: 36px;
+  border-top: 1px solid var(--gray-300);
+}
+
+.tool-library-heading {
+  max-width: 840px;
+  margin-bottom: 22px;
+}
+
+.tool-library-heading h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  line-height: 1.08;
+}
+
+.tool-library-heading p {
+  color: var(--gray-600);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tool-grid article {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(7, 26, 51, 0.05);
+}
+
+.tool-grid h4,
+.tool-grid h5 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.22;
+}
+
+.tool-grid p {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.94rem;
+}
+
+.tool-grid a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.tool-grid a:hover {
+  color: var(--carolina);
+}
+
+.tool-category {
+  margin-top: 30px;
+}
+
+.tool-category > h4 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: 1.15rem;
 }
 
 .service-card h3,
@@ -785,6 +897,7 @@ a {
   .philosophy-grid,
   .media-grid,
   .resource-grid,
+  .tool-grid,
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -830,6 +943,7 @@ a {
   .philosophy-grid,
   .media-grid,
   .resource-grid,
+  .tool-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
@@ -842,6 +956,10 @@ a {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .resource-card .button {
     width: 100%;
   }
 }
