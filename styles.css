@@ -495,6 +495,7 @@ a {
 
 .service-card,
 .resource-grid article,
+.media-grid article,
 .testimonial-grid blockquote {
   margin: 0;
   padding: 26px;
@@ -506,6 +507,7 @@ a {
 
 .service-card h3,
 .resource-grid h3,
+.media-grid h3,
 .workshop-card h3 {
   margin: 0 0 10px;
   color: var(--navy);
@@ -515,6 +517,7 @@ a {
 
 .service-card p,
 .resource-grid p,
+.media-grid p,
 .workshop-card p {
   color: var(--gray-600);
 }
@@ -528,6 +531,59 @@ a {
 }
 
 .service-card a:hover {
+  color: var(--carolina);
+}
+
+.media-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 30px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy), #123b6d);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.media-feature .eyebrow,
+.media-feature h3 {
+  color: var(--carolina-soft);
+}
+
+.media-feature h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.media-feature p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.media-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media-grid a {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--navy);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.media-grid a:hover {
   color: var(--carolina);
 }
 
@@ -598,6 +654,42 @@ a {
   box-shadow: var(--shadow);
 }
 
+.form-status {
+  display: none;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.form-status.is-pending,
+.form-status.is-success,
+.form-status.is-error {
+  display: block;
+}
+
+.form-status.is-pending {
+  color: var(--navy);
+  background: var(--carolina-soft);
+}
+
+.form-status.is-success {
+  color: #14532d;
+  background: #dcfce7;
+}
+
+.form-status.is-error {
+  color: #7f1d1d;
+  background: #fee2e2;
+}
+
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-form label {
   display: grid;
   gap: 7px;
@@ -623,6 +715,11 @@ a {
 .contact-form .button {
   width: 100%;
   font: inherit;
+}
+
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: 0.7;
 }
 
 .site-footer {
@@ -686,9 +783,14 @@ a {
 
   .card-grid,
   .philosophy-grid,
+  .media-grid,
   .resource-grid,
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-feature {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -726,6 +828,7 @@ a {
   .focus-grid,
   .card-grid,
   .philosophy-grid,
+  .media-grid,
   .resource-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;

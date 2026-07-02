@@ -31,6 +31,7 @@
           <a href="#workshops">Workshops</a>
           <a href="#resources">Resources</a>
           <a href="#testimonials">Testimonials</a>
+          <a href="#media">Media</a>
           <a class="nav-cta" href="#contact">Contact</a>
         </div>
       </nav>
@@ -364,6 +365,97 @@
         </div>
       </section>
 
+      <section class="section section-muted" id="media">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Podcast & Media</p>
+            <h2>Hear the Better Together Story</h2>
+            <p>
+              Explore Derek's school podcast, guest conversations, news
+              features, and conference sessions about culture, consolidation,
+              leadership systems, and practical change.
+            </p>
+          </div>
+          <div class="media-feature">
+            <div>
+              <p class="eyebrow">Featured Podcast</p>
+              <h3>Better Together</h3>
+              <p>
+                A school podcast sharing stories, voices, and practical
+                leadership lessons from the work of building one school, one
+                culture, and one community.
+              </p>
+            </div>
+            <a
+              class="button button-primary"
+              href="https://podcasts.apple.com/us/podcast/better-together/id1796633036"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Listen on Apple Podcasts
+            </a>
+          </div>
+          <div class="media-grid">
+            <article>
+              <h3>Proud Principal Podcast</h3>
+              <p>Building culture and leading through change.</p>
+              <a href="https://podcasts.apple.com/us/podcast/proud-principals-podcast-derek-cantrell-building-culture/id1766181622?i=1000690371613" target="_blank" rel="noopener noreferrer">Listen</a>
+            </article>
+            <article>
+              <h3>Principal Matters</h3>
+              <p>Better Together with Derek Cantrell.</p>
+              <a href="https://podcasts.apple.com/us/podcast/pmp465-better-together-with-derek-cantrell/id1070576885?i=1000725834575" target="_blank" rel="noopener noreferrer">Apple Podcast</a>
+              <a href="https://youtu.be/nCVnhGjgSWE?si=v9qIaRAMJ3kAgTkG" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </article>
+            <article>
+              <h3>Better Leaders / Better Schools</h3>
+              <p>How one principal united two rival high schools.</p>
+              <a href="https://podcasts.apple.com/us/podcast/how-this-principal-united-two-enemy-high-schools/id1036167679?i=1000729450296" target="_blank" rel="noopener noreferrer">Listen</a>
+            </article>
+            <article>
+              <h3>Beyond Self Care</h3>
+              <p>Connection strategies for turning pressure into power.</p>
+              <a href="https://youtu.be/FhspSEZNRJQ?si=iOajnr8HgGyqCGvd" target="_blank" rel="noopener noreferrer">Watch</a>
+            </article>
+            <article>
+              <h3>WDBJ7 News Interview</h3>
+              <p>Educator spotlights book about reshaping a school division.</p>
+              <a href="https://www.wdbj7.com/2026/03/27/educator-spotlights-book-about-reshaping-school-division/" target="_blank" rel="noopener noreferrer">Read / Watch</a>
+            </article>
+            <article>
+              <h3>Innovative Schools Summit</h3>
+              <p>Presentation resources from Derek's 2026 conference session.</p>
+              <a href="https://drive.google.com/file/d/1Jbok5X4ZnXkDjuKCubq7PK3ZIUPKZSky/view?usp=sharing" target="_blank" rel="noopener noreferrer">Session Video</a>
+            </article>
+            <article>
+              <h3>Value Proposition Podcast</h3>
+              <p>A conversation on the Better Together story.</p>
+              <a href="https://youtu.be/3oc3Izuexkc?si=6CmRayOP4ANx3P5d" target="_blank" rel="noopener noreferrer">Watch</a>
+            </article>
+            <article>
+              <h3>Transformative Principal</h3>
+              <p>Better Together with Derek Cantrell.</p>
+              <a href="https://podcasts.apple.com/us/podcast/better-together-with-derek-cantrell/id770942472?i=1000760911942" target="_blank" rel="noopener noreferrer">Listen</a>
+            </article>
+            <article>
+              <h3>Cool Coffee</h3>
+              <p>A principal's perspective on school leadership.</p>
+              <a href="https://podcasts.apple.com/us/podcast/cool-coffee-w-kansas-principals/id1764171943?i=1000760440207" target="_blank" rel="noopener noreferrer">Listen</a>
+            </article>
+            <article>
+              <h3>Regulated Schools / Better Results</h3>
+              <p>Leadership habits that create a unified, powerful school.</p>
+              <a href="https://youtu.be/3E6KOkaaDds?si=EX2hlFRz9GONUCOK" target="_blank" rel="noopener noreferrer">Watch</a>
+            </article>
+            <article>
+              <h3>Have a Life Teaching</h3>
+              <p>Practical leadership conversation with Derek Cantrell.</p>
+              <a href="https://podcasts.apple.com/us/podcast/have-a-life-teaching/id1702975996?i=1000771839301" target="_blank" rel="noopener noreferrer">Listen</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact-section" id="contact">
         <div class="section-inner contact-layout">
           <div>
@@ -381,8 +473,12 @@
               <a href="mailto:derekcatch19@aol.com">derekcatch19@aol.com</a>
             </p>
           </div>
-          <!-- This form is static for now. Connect it to a form service or backend later. -->
-          <form class="contact-form" action="mailto:derekcatch19@aol.com" method="post" enctype="text/plain">
+          <form class="contact-form" action="/api/contact" method="post" data-contact-form>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+            <label class="hidden-field">
+              Website
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </label>
             <label>
               Name
               <input type="text" name="name" autocomplete="name" required />

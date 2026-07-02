@@ -33,4 +33,18 @@ The About section includes a headshot placeholder. Replace the placeholder block
 - No payment processing is included.
 - No login system is included.
 - No student data features are included.
-- The contact form uses `mailto:` for now. For production, connect it to a secure form service or a backend endpoint.
+- The contact form posts to `/api/contact`, a Vercel serverless function.
+
+## Contact Form Setup on Vercel
+
+The contact form uses Resend to send messages securely.
+
+Add these environment variables in Vercel:
+
+```text
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO=derekcatch19@aol.com
+CONTACT_FROM=Better Together Leadership <your_verified_sender@yourdomain.com>
+```
+
+`CONTACT_FROM` should use a sender address verified in Resend. After adding or changing environment variables, redeploy the site.
