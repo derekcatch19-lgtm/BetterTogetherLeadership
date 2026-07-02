@@ -48,3 +48,6 @@ CONTACT_FROM=Better Together Leadership <your_verified_sender@yourdomain.com>
 ```
 
 `CONTACT_FROM` should use a sender address verified in Resend. After adding or changing environment variables, redeploy the site.
+The site always sends contact form messages to `bettertogetherleadership@gmail.com`. If your Vercel
+variable is currently named `resend_API`, the contact route will still read it, but `RESEND_API_KEY`
+is the recommended name.

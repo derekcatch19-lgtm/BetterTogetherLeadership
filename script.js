@@ -96,7 +96,8 @@ if (contactForm && formStatus) {
       formStatus.className = "form-status is-success";
     } catch (error) {
       formStatus.textContent =
-        error.message || "The message could not be sent. Please email Derek directly.";
+        error.message ||
+        "The message could not be sent. Please email bettertogetherleadership@gmail.com directly.";
       formStatus.className = "form-status is-error";
     } finally {
       if (submitButton) submitButton.disabled = false;

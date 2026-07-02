@@ -1,6 +1,11 @@
-const TO_EMAIL = process.env.CONTACT_TO || "bettertogetherleadership@gmail.com";
+const TO_EMAIL = "bettertogetherleadership@gmail.com";
 const FROM_EMAIL =
   process.env.CONTACT_FROM || "Better Together Leadership <onboarding@resend.dev>";
+const RESEND_API_KEY =
+  process.env.RESEND_API_KEY ||
+  process.env.RESEND_API ||
+  process.env.resend_API ||
+  process.env.RESEND_KEY;
 
 function json(response, statusCode) {
   return { response, statusCode };
@@ -43,12 +48,12 @@ export default async function handler(request, response) {
     return response.status(result.statusCode).json(result.response);
   }
 
-  if (!process.env.RESEND_API_KEY) {
+  if (!RESEND_API_KEY) {
     const result = json(
       {
         ok: false,
         message:
-          "Email is not configured yet. Please add RESEND_API_KEY in Vercel.",
+          "Email is not configured yet. In Vercel, add RESEND_API_KEY and redeploy the site.",
       },
       500
     );
@@ -80,7 +85,7 @@ export default async function handler(request, response) {
   const resendResponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      Authorization: `Bearer ${RESEND_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -94,10 +99,11 @@ export default async function handler(request, response) {
   });
 
   if (!resendResponse.ok) {
+    const errorMessage = await getResendErrorMessage(resendResponse);
     const result = json(
       {
         ok: false,
-        message: "The message could not be sent. Please email Derek directly.",
+        message: `The message could not be sent through Resend. Please email bettertogetherleadership@gmail.com directly. Resend detail: ${errorMessage}`,
       },
       502
     );
@@ -106,6 +112,18 @@ export default async function handler(request, response) {
 
   const result = json({ ok: true, message: "Thanks. Your message has been sent." }, 200);
   return response.status(result.statusCode).json(result.response);
+}
+
+async function getResendErrorMessage(resendResponse) {
+  try {
+    const details = await resendResponse.json();
+    return clean(
+      details.message || details.error || "Check that CONTACT_FROM is verified in Resend.",
+      400
+    );
+  } catch {
+    return "Check that CONTACT_FROM is verified in Resend.";
+  }
 }
 
 function escapeHtml(value) {
