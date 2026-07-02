@@ -43,7 +43,7 @@ Add these environment variables in Vercel:
 
 ```text
 RESEND_API_KEY=your_resend_api_key
-CONTACT_TO=derekcatch19@aol.com
+CONTACT_TO=bettertogetherleadership@gmail.com
 CONTACT_FROM=Better Together Leadership <your_verified_sender@yourdomain.com>
 ```
 

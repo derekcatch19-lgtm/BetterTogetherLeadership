@@ -1,4 +1,4 @@
-const TO_EMAIL = process.env.CONTACT_TO || "derekcatch19@aol.com";
+const TO_EMAIL = process.env.CONTACT_TO || "bettertogetherleadership@gmail.com";
 const FROM_EMAIL =
   process.env.CONTACT_FROM || "Better Together Leadership <onboarding@resend.dev>";
 
