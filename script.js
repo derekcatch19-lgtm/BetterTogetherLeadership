@@ -18,6 +18,52 @@ if (navToggle && navLinks) {
   });
 }
 
+const toolToggles = document.querySelectorAll("[data-tool-toggle]");
+
+toolToggles.forEach((toggle) => {
+  const panelId = toggle.getAttribute("data-tool-toggle");
+  const panel = document.getElementById(panelId);
+  const closedLabel = toggle.textContent.trim();
+
+  if (!panel) return;
+
+  toggle.addEventListener("click", () => {
+    const willOpen = panel.hidden;
+
+    document.querySelectorAll(".tool-library").forEach((library) => {
+      library.hidden = true;
+    });
+    toolToggles.forEach((button) => {
+      button.setAttribute("aria-expanded", "false");
+      button.textContent = button.dataset.closedLabel || button.textContent;
+    });
+
+    toggle.dataset.closedLabel = closedLabel;
+
+    if (willOpen) {
+      panel.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.textContent = panelId === "ai-tools" ? "Hide AI Tools" : "Hide Leadership Tools";
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+document.querySelectorAll("[data-tool-close]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const panelId = button.getAttribute("data-tool-close");
+    const panel = document.getElementById(panelId);
+    const toggle = document.querySelector(`[data-tool-toggle="${panelId}"]`);
+
+    if (panel) panel.hidden = true;
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.textContent = toggle.dataset.closedLabel || toggle.textContent;
+      toggle.focus();
+    }
+  });
+});
+
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 

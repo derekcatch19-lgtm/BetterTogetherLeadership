@@ -554,6 +554,10 @@ a {
   border-top: 1px solid var(--gray-300);
 }
 
+.tool-library[hidden] {
+  display: none;
+}
+
 .tool-library-heading {
   max-width: 840px;
   margin-bottom: 22px;
@@ -568,6 +572,24 @@ a {
 
 .tool-library-heading p {
   color: var(--gray-600);
+}
+
+.tool-close {
+  display: inline-flex;
+  min-height: 38px;
+  margin: 16px 0 6px;
+  padding: 8px 12px;
+  color: var(--navy);
+  background: var(--carolina-soft);
+  border: 1px solid rgba(75, 156, 211, 0.35);
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tool-close:hover {
+  background: #c7e5f8;
 }
 
 .tool-grid {

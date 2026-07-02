@@ -360,7 +360,15 @@
                 Practical AI tools built specifically for educators to reduce
                 paperwork and increase time with people.
               </p>
-              <a class="button button-primary" href="#ai-tools">Explore AI Tools</a>
+              <button
+                class="button button-primary"
+                type="button"
+                data-tool-toggle="ai-tools"
+                aria-controls="ai-tools"
+                aria-expanded="false"
+              >
+                Explore AI Tools
+              </button>
             </article>
             <article class="resource-card">
               <span class="resource-icon">Lead</span>
@@ -375,14 +383,23 @@
                 relationships, improving communication, and creating lasting
                 school improvement.
               </p>
-              <a class="button button-navy" href="#leadership-tools">View Leadership Tools</a>
+              <button
+                class="button button-navy"
+                type="button"
+                data-tool-toggle="leadership-tools"
+                aria-controls="leadership-tools"
+                aria-expanded="false"
+              >
+                View Leadership Tools
+              </button>
             </article>
           </div>
 
-          <section class="tool-library" id="ai-tools" aria-labelledby="ai-tools-title">
+          <section class="tool-library" id="ai-tools" aria-labelledby="ai-tools-title" hidden>
             <div class="tool-library-heading">
               <p class="eyebrow">People Over Paperwork</p>
               <h3 id="ai-tools-title">Custom AI Tools for Educators</h3>
+              <button class="tool-close" type="button" data-tool-close="ai-tools">Close AI Tools</button>
               <p>
                 These custom AI tools help educators save time, improve
                 feedback, and streamline lesson design, data analysis, and
@@ -453,10 +470,11 @@
             </div>
           </section>
 
-          <section class="tool-library" id="leadership-tools" aria-labelledby="leadership-tools-title">
+          <section class="tool-library" id="leadership-tools" aria-labelledby="leadership-tools-title" hidden>
             <div class="tool-library-heading">
               <p class="eyebrow">Better Together</p>
               <h3 id="leadership-tools-title">Leadership Tools for Leading Culture Through Change</h3>
+              <button class="tool-close" type="button" data-tool-close="leadership-tools">Close Leadership Tools</button>
               <p>
                 Practical systems, templates, and examples for communication,
                 belonging, recognition, partnerships, adult learning, and staff
