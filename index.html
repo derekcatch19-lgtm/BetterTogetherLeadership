@@ -251,7 +251,7 @@
             <article class="service-card">
               <h3>People Over Paperwork Workshop</h3>
               <p>Practical AI for educators who want to save time, improve feedback, strengthen instruction, and reinvest more energy in people.</p>
-              <a href="#people-over-paperwork">Learn More</a>
+              <button class="service-link" type="button" data-workshop-toggle aria-expanded="false" aria-controls="people-over-paperwork">Learn More</button>
             </article>
             <article class="service-card">
               <h3>School Culture &amp; Climate</h3>
@@ -272,7 +272,7 @@
         </div>
       </section>
 
-      <section class="section section-muted pop-workshop" id="people-over-paperwork">
+      <section class="section section-muted pop-workshop" id="people-over-paperwork" data-workshop-section hidden>
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow">People Over Paperwork</p>
@@ -356,34 +356,117 @@
 
               <article class="station-panel" id="station-1" role="tabpanel" aria-labelledby="station-tab-1">
                 <div class="station-header"><span>7 Minutes</span><h4>Station 1: Better Feedback for Teachers</h4></div>
-                <p><strong>Mission:</strong> Turn quick classroom notes into meaningful, growth-focused instructional feedback while saving administrators valuable time.</p>
+                <p><strong>Mission:</strong> Turn quick classroom walkthrough notes into meaningful, growth-focused instructional feedback that supports teachers while saving administrators valuable time.</p>
                 <div class="station-tool-grid">
                   <div>
                     <h5><a href="https://chatgpt.com/g/g-68af18f3646c819189b8487201d255fa-walkthrough-feedback-coach" target="_blank" rel="noopener noreferrer">Walkthrough Feedback Coach</a></h5>
-                    <p><strong>Purpose:</strong> Generate positive, actionable feedback aligned to observation notes.</p>
-                    <p><strong>Beginning Prompt:</strong> Please take my walkthrough notes below and generate professional walkthrough feedback focused on student engagement. Include celebrations, instructional strengths, evidence observed, one reflective question, one actionable next step, and an encouraging closing statement.</p>
-                    <ul>
-                      <li>Teacher: Mrs. Emily Carter, Algebra I</li>
-                      <li>Focus: Student engagement during a 9:18-9:28 walkthrough</li>
-                      <li>Learning target posted, collaborative pairs, 18 of 21 students engaged, teacher circulating, exit ticket aligned, positive climate</li>
-                      <li>Growth area: increase higher-order questions and opportunities for students to justify reasoning before teacher assistance</li>
-                    </ul>
-                    <p><strong>Follow-Up Prompts:</strong> Create a short coaching email. Generate two or three high-impact questions for a five-minute follow-up conversation.</p>
+                    <p><strong>Purpose:</strong> Turn quick classroom walkthrough notes into meaningful, growth-focused instructional feedback that supports teachers while saving administrators valuable time.</p>
+                    <div class="prompt-block">
+                      <h6>Beginning Prompt</h6>
+                      <p>Copy and paste the prompt below into the GPT.</p>
+                      <p>Please take my walkthrough notes below and generate professional walkthrough feedback focused on student engagement.</p>
+                      <p>Include:</p>
+                      <ul>
+                        <li>Celebrations</li>
+                        <li>Instructional strengths</li>
+                        <li>Evidence observed</li>
+                        <li>One reflective question</li>
+                        <li>One actionable next step</li>
+                        <li>An encouraging closing statement</li>
+                      </ul>
+                    </div>
+                    <div class="prompt-block">
+                      <h6>Walkthrough Notes</h6>
+                      <p>Teacher: Mrs. Emily Carter<br />Course: Algebra I<br />Walkthrough Focus: Student Engagement</p>
+                      <p>9:18-9:28 walkthrough</p>
+                      <ul>
+                        <li>Learning target posted and referenced</li>
+                        <li>Bell ringer started immediately</li>
+                        <li>Students working collaboratively in pairs</li>
+                        <li>18 of 21 students actively engaged</li>
+                        <li>Teacher circulating and checking for understanding</li>
+                        <li>Students explaining thinking to partners</li>
+                        <li>Academic vocabulary heard: slope, intercept, substitute</li>
+                        <li>One group briefly off task; teacher redirected quickly</li>
+                        <li>Most questions were procedural</li>
+                        <li>Only two higher-order questions observed</li>
+                        <li>Several students waited for teacher before attempting the next problem</li>
+                        <li>Exit ticket aligned with lesson objective</li>
+                        <li>Positive classroom climate</li>
+                        <li>Students respectful and comfortable asking questions</li>
+                        <li>Consider increasing opportunities for students to justify reasoning before teacher assistance</li>
+                      </ul>
+                    </div>
+                    <div class="prompt-block">
+                      <h6>Follow-Up Prompt #1</h6>
+                      <p>Create a short email to the teacher that shares this feedback in a conversational, encouraging, and coaching-focused tone.</p>
+                      <h6>Follow-Up Prompt #2</h6>
+                      <p>What are two or three high-impact coaching questions I could ask during a five-minute follow-up conversation with this teacher?</p>
+                    </div>
                   </div>
                   <div>
                     <h5><a href="https://chatgpt.com/g/g-gA7uQ8ZTk-formal-teacher-observer" target="_blank" rel="noopener noreferrer">Formal Teacher Observer</a></h5>
-                    <p><strong>Purpose:</strong> Generate formal observation comments aligned to the Virginia Uniform Performance Standards.</p>
-                    <p><strong>Beginning Prompt:</strong> Please take my classroom observation notes below and provide professional comments aligned to all eight Virginia Uniform Performance Standards.</p>
-                    <ul>
-                      <li>Teacher: Mr. Michael Reynolds, Biology I</li>
-                      <li>Students compare photosynthesis and cellular respiration using lab evidence</li>
-                      <li>Strengths: clear objective, organized materials, lab roles, academic vocabulary, questioning, misconception checks, positive culture</li>
-                      <li>Growth areas: student-led questioning, enrichment for advanced learners, structured reflection before whole-group discussion</li>
-                    </ul>
-                    <p><strong>Follow-Up Prompts:</strong> Add evidence and instructional impact. Design a post-observation conference agenda. Identify the strongest coaching points.</p>
+                    <p><strong>Purpose:</strong> Generate a comprehensive formal observation aligned to the Virginia Uniform Performance Standards from your classroom observation notes.</p>
+                    <div class="prompt-block">
+                      <h6>Beginning Prompt</h6>
+                      <p>Copy and paste the prompt below into the GPT.</p>
+                      <p>Please take my classroom observation notes below and provide professional comments aligned to all eight Virginia Uniform Performance Standards.</p>
+                    </div>
+                    <div class="prompt-block">
+                      <h6>Formal Observation Notes</h6>
+                      <p>Teacher: Mr. Michael Reynolds<br />Course: Biology I</p>
+                      <p>Learning target posted: Students will compare photosynthesis and cellular respiration using evidence from today's lab.</p>
+                      <ul>
+                        <li>Teacher reviewed lesson objective and success criteria.</li>
+                        <li>Bell ringer connected previous learning.</li>
+                        <li>Materials organized before students entered.</li>
+                        <li>Teacher modeled lab expectations clearly.</li>
+                        <li>Students worked collaboratively in groups of four with assigned roles.</li>
+                        <li>Students used academic vocabulary: chlorophyll, glucose, ATP, carbon dioxide, oxygen.</li>
+                        <li>Teacher circulated consistently and checked for understanding.</li>
+                        <li>Teacher used questioning to uncover misconceptions.</li>
+                        <li>Students justified responses using evidence from their lab.</li>
+                        <li>Teacher redirected misconceptions about ATP production.</li>
+                        <li>Nearly all students actively engaged.</li>
+                        <li>Positive classroom culture.</li>
+                        <li>Students respectful and comfortable asking questions.</li>
+                        <li>Exit ticket aligned with today's learning target.</li>
+                      </ul>
+                      <p>Possible growth areas:</p>
+                      <ul>
+                        <li>Increase opportunities for student-led questioning.</li>
+                        <li>Provide enrichment opportunities for advanced learners.</li>
+                        <li>Increase structured student reflection before whole-group discussion.</li>
+                      </ul>
+                    </div>
+                    <div class="prompt-block">
+                      <h6>Follow-Up Prompt #1</h6>
+                      <p>Add more depth to the comments by including additional evidence from the observation and explaining the instructional impact.</p>
+                      <h6>Follow-Up Prompt #2</h6>
+                      <p>Design a post-observation conference agenda based on this observation.</p>
+                      <p>Include:</p>
+                      <ul>
+                        <li>Celebrations</li>
+                        <li>Reflective questions</li>
+                        <li>Coaching conversation</li>
+                        <li>Areas for continued growth</li>
+                        <li>Agreed-upon next steps</li>
+                      </ul>
+                      <h6>Follow-Up Prompt #3</h6>
+                      <p>What are the strongest coaching points I should discuss during the post-observation conference?</p>
+                    </div>
                   </div>
                 </div>
-                <p class="reflection"><strong>Reflection:</strong> Which tool would save the most time? What would you still personalize before sharing feedback? If this station saved 30 minutes each week, how would you reinvest that time?</p>
+                <div class="reflection">
+                  <p><strong>Reflection:</strong> Discuss with your partner:</p>
+                  <ul>
+                    <li>Which tool would save you the most time?</li>
+                    <li>How could these tools improve the quality of your feedback?</li>
+                    <li>How could AI allow you to spend more time coaching and less time writing?</li>
+                    <li>What would you still personalize before sharing feedback with a teacher?</li>
+                  </ul>
+                  <p><strong>People Over Paperwork Reflection:</strong> If this station saved you 30 minutes every week, how would you reinvest that time in your teachers or students?</p>
+                </div>
               </article>
 
               <article class="station-panel" id="station-2" role="tabpanel" aria-labelledby="station-tab-2" hidden>

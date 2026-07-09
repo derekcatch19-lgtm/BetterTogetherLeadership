@@ -64,6 +64,43 @@ document.querySelectorAll("[data-tool-close]").forEach((button) => {
   });
 });
 
+const workshopToggle = document.querySelector("[data-workshop-toggle]");
+const workshopSection = document.querySelector("[data-workshop-section]");
+
+function openWorkshopSection(shouldScroll = true) {
+  if (!workshopSection) return;
+
+  workshopSection.hidden = false;
+
+  if (workshopToggle) {
+    workshopToggle.setAttribute("aria-expanded", "true");
+    workshopToggle.textContent = "Hide Workshop";
+  }
+
+  if (shouldScroll) {
+    workshopSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+if (workshopToggle && workshopSection) {
+  workshopToggle.addEventListener("click", () => {
+    const willOpen = workshopSection.hidden;
+
+    if (willOpen) {
+      openWorkshopSection();
+      return;
+    }
+
+    workshopSection.hidden = true;
+    workshopToggle.setAttribute("aria-expanded", "false");
+    workshopToggle.textContent = "Learn More";
+  });
+}
+
+if (window.location.hash === "#people-over-paperwork") {
+  openWorkshopSection();
+}
+
 // Workshop resource access. Change this code when Derek creates a school-specific password.
 const workshopAccessCode = "peopleoverpaperwork";
 const workshopAccessForm = document.querySelector("[data-workshop-access-form]");
