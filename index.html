@@ -249,14 +249,9 @@
           </div>
           <div class="card-grid">
             <article class="service-card">
-              <h3>AI for School Leaders</h3>
-              <p>Help leaders use AI to save time on planning, communication, meeting design, observation summaries, and daily leadership tasks.</p>
-              <a href="#contact">Learn More</a>
-            </article>
-            <article class="service-card">
-              <h3>Custom GPT Workshops</h3>
-              <p>Build practical GPT tools for lesson planning, assessment review, PLC prompts, school improvement planning, and repeatable workflows.</p>
-              <a href="#contact">Learn More</a>
+              <h3>People Over Paperwork Workshop</h3>
+              <p>Practical AI for educators who want to save time, improve feedback, strengthen instruction, and reinvest more energy in people.</p>
+              <a href="#people-over-paperwork">Learn More</a>
             </article>
             <article class="service-card">
               <h3>School Culture &amp; Climate</h3>
@@ -273,6 +268,210 @@
               <p>Turn the Better Together philosophy into practical rhythms for meetings, communication, decisions, and follow-through.</p>
               <a href="#contact">Learn More</a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted pop-workshop" id="people-over-paperwork">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">People Over Paperwork</p>
+            <h2>Practical AI Workshop for Educators</h2>
+            <p>
+              A full-day, hands-on workshop designed to help school leaders and educators use AI
+              to reclaim time, strengthen instruction, improve decisions, and invest more in people
+              than paperwork.
+            </p>
+          </div>
+          <div class="agenda-layout">
+            <figure class="agenda-preview">
+              <img
+                src="assets/people-over-paperwork-agenda.png"
+                alt="People Over Paperwork workshop agenda with times, topics, and outcomes"
+              />
+              <figcaption>Sample agenda. Timing and activities can be adjusted for each school or district.</figcaption>
+            </figure>
+            <div class="access-card">
+              <p class="eyebrow">Workshop Resources</p>
+              <h3>Participant Resource Library</h3>
+              <p>
+                Schools that book the workshop receive an access code for slides, activities,
+                sample data files, and AI Gallery Walk resources.
+              </p>
+              <form class="access-form" data-workshop-access-form>
+                <label>
+                  Access Code
+                  <input type="password" name="workshop_password" autocomplete="current-password" placeholder="Enter workshop code" required />
+                </label>
+                <button class="button button-navy" type="submit">Open Resources</button>
+                <p class="access-status" data-workshop-access-status aria-live="polite"></p>
+              </form>
+              <p class="access-note">Code can be changed by editing the workshop access setting in <code>script.js</code>.</p>
+            </div>
+          </div>
+
+          <div class="workshop-resource-library" id="workshop-resource-library" data-workshop-resource-library hidden>
+            <div class="tool-library-heading">
+              <p class="eyebrow">Unlocked Workshop Area</p>
+              <h3>People Over Paperwork Resources</h3>
+              <p>
+                Add slides, participant handouts, and follow-up materials here as the workshop
+                library grows. The AI Gallery Walk activity below is ready for participants.
+              </p>
+            </div>
+            <div class="resource-folder-grid">
+              <article class="resource-folder">
+                <h4>Slides</h4>
+                <p>Placeholder folder for the workshop slide deck.</p>
+              </article>
+              <article class="resource-folder">
+                <h4>Activities</h4>
+                <p>Placeholder folder for participant activities and table prompts.</p>
+              </article>
+              <article class="resource-folder">
+                <h4>Sample Data Files</h4>
+                <p>Use these files during Station 4 for benchmark and growth analysis.</p>
+                <a href="assets/workshop-resources/biology-pre-test-performance-matters-sample.xlsx" download>Biology Pre-Test</a>
+                <a href="assets/workshop-resources/biology-benchmark1-performance-matters-sample.xlsx" download>Biology Benchmark 1</a>
+                <a href="assets/workshop-resources/biology-sol-posttest-performance-matters-sample.xlsx" download>Biology SOL Post-Test</a>
+              </article>
+            </div>
+
+            <section class="gallery-walk" aria-labelledby="gallery-walk-title">
+              <div class="gallery-heading">
+                <p class="eyebrow">AI Gallery Walk Activity</p>
+                <h3 id="gallery-walk-title">Five Stations for Reclaiming Time</h3>
+                <p>
+                  Participants rotate through five practical stations focused on feedback, lesson
+                  design, standards and assessments, data conversations, and leadership systems.
+                </p>
+              </div>
+              <div class="station-tabs" role="tablist" aria-label="AI Gallery Walk Stations">
+                <button class="station-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="station-1" id="station-tab-1" data-station-tab="station-1">Station 1: Better Feedback</button>
+                <button class="station-tab" type="button" role="tab" aria-selected="false" aria-controls="station-2" id="station-tab-2" data-station-tab="station-2">Station 2: Better Lessons</button>
+                <button class="station-tab" type="button" role="tab" aria-selected="false" aria-controls="station-3" id="station-tab-3" data-station-tab="station-3">Station 3: Standards &amp; Assessments</button>
+                <button class="station-tab" type="button" role="tab" aria-selected="false" aria-controls="station-4" id="station-tab-4" data-station-tab="station-4">Station 4: Data Conversations</button>
+                <button class="station-tab" type="button" role="tab" aria-selected="false" aria-controls="station-5" id="station-tab-5" data-station-tab="station-5">Station 5: Better Leadership</button>
+              </div>
+
+              <article class="station-panel" id="station-1" role="tabpanel" aria-labelledby="station-tab-1">
+                <div class="station-header"><span>7 Minutes</span><h4>Station 1: Better Feedback for Teachers</h4></div>
+                <p><strong>Mission:</strong> Turn quick classroom notes into meaningful, growth-focused instructional feedback while saving administrators valuable time.</p>
+                <div class="station-tool-grid">
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-68af18f3646c819189b8487201d255fa-walkthrough-feedback-coach" target="_blank" rel="noopener noreferrer">Walkthrough Feedback Coach</a></h5>
+                    <p><strong>Purpose:</strong> Generate positive, actionable feedback aligned to observation notes.</p>
+                    <p><strong>Beginning Prompt:</strong> Please take my walkthrough notes below and generate professional walkthrough feedback focused on student engagement. Include celebrations, instructional strengths, evidence observed, one reflective question, one actionable next step, and an encouraging closing statement.</p>
+                    <ul>
+                      <li>Teacher: Mrs. Emily Carter, Algebra I</li>
+                      <li>Focus: Student engagement during a 9:18-9:28 walkthrough</li>
+                      <li>Learning target posted, collaborative pairs, 18 of 21 students engaged, teacher circulating, exit ticket aligned, positive climate</li>
+                      <li>Growth area: increase higher-order questions and opportunities for students to justify reasoning before teacher assistance</li>
+                    </ul>
+                    <p><strong>Follow-Up Prompts:</strong> Create a short coaching email. Generate two or three high-impact questions for a five-minute follow-up conversation.</p>
+                  </div>
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-gA7uQ8ZTk-formal-teacher-observer" target="_blank" rel="noopener noreferrer">Formal Teacher Observer</a></h5>
+                    <p><strong>Purpose:</strong> Generate formal observation comments aligned to the Virginia Uniform Performance Standards.</p>
+                    <p><strong>Beginning Prompt:</strong> Please take my classroom observation notes below and provide professional comments aligned to all eight Virginia Uniform Performance Standards.</p>
+                    <ul>
+                      <li>Teacher: Mr. Michael Reynolds, Biology I</li>
+                      <li>Students compare photosynthesis and cellular respiration using lab evidence</li>
+                      <li>Strengths: clear objective, organized materials, lab roles, academic vocabulary, questioning, misconception checks, positive culture</li>
+                      <li>Growth areas: student-led questioning, enrichment for advanced learners, structured reflection before whole-group discussion</li>
+                    </ul>
+                    <p><strong>Follow-Up Prompts:</strong> Add evidence and instructional impact. Design a post-observation conference agenda. Identify the strongest coaching points.</p>
+                  </div>
+                </div>
+                <p class="reflection"><strong>Reflection:</strong> Which tool would save the most time? What would you still personalize before sharing feedback? If this station saved 30 minutes each week, how would you reinvest that time?</p>
+              </article>
+
+              <article class="station-panel" id="station-2" role="tabpanel" aria-labelledby="station-tab-2" hidden>
+                <div class="station-header"><span>7 Minutes</span><h4>Station 2: Building Better Lessons</h4></div>
+                <p><strong>Mission:</strong> Create a complete Virginia SOL lesson, evaluate two lesson plans for rigor, and discover how AI can strengthen planning while preserving teacher creativity.</p>
+                <div class="station-tool-grid">
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-689b4eec6bc081919d725b323cfb5cec-ahps-virginia-sol-lesson-plan-creator" target="_blank" rel="noopener noreferrer">AHPS Virginia SOL Lesson Plan Creator</a></h5>
+                    <p><strong>Purpose:</strong> Create engaging, standards-aligned Virginia lesson plans with differentiation, formative assessment, and student engagement.</p>
+                    <p><strong>Beginning Prompt:</strong> Create a complete Virginia SOL lesson plan for Algebra I SOL A.4, solving systems of equations by graphing, for a 90-minute mixed-ability class with accommodations, English Learners, discourse needs, and enrichment opportunities.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Increase engagement and collaboration. Suggest three formative assessment strategies. Create differentiated supports and enrichment activities.</p>
+                  </div>
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-68a754301c488191a1b97a6786778a49-assistant-evaluating-the-rigor-of-a-lesson-plan" target="_blank" rel="noopener noreferrer">Assistant: Evaluating the Rigor of a Lesson Plan</a></h5>
+                    <p><strong>Purpose:</strong> Evaluate lesson plans for alignment, rigor, engagement, cognitive demand, differentiation, and effectiveness.</p>
+                    <p><strong>Activity 1:</strong> Evaluate Lesson Plan A, a high-engagement Algebra I systems lesson with Desmos modeling, partner practice, gallery walk, peer feedback, differentiation, and student reflection.</p>
+                    <p><strong>Activity 2:</strong> Evaluate Lesson Plan B, a lecture-heavy version with limited engagement, minimal checks for understanding, and basic differentiation.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Compare Lesson A and B. Rewrite Lesson B using stronger instructional practices. Describe likely walkthrough evidence in each lesson.</p>
+                  </div>
+                </div>
+                <p class="reflection"><strong>Reflection:</strong> Which lesson would you rather experience as a student? How could these GPTs support new teachers, PLCs, or instructional coaching?</p>
+              </article>
+
+              <article class="station-panel" id="station-3" role="tabpanel" aria-labelledby="station-tab-3" hidden>
+                <div class="station-header"><span>7 Minutes</span><h4>Station 3: Better Standards &amp; Better Assessments</h4></div>
+                <p><strong>Mission:</strong> Unpack a Virginia SOL, evaluate assessment alignment, and strengthen instruction before students are assessed.</p>
+                <div class="station-tool-grid">
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-688f7dd6e4348191acff3dd32e677e29-assistant-unpacking-a-standard" target="_blank" rel="noopener noreferrer">Assistant: Unpacking a Standard</a></h5>
+                    <p><strong>Purpose:</strong> Break a Virginia SOL into learning targets, essential understandings, vocabulary, misconceptions, questions, success criteria, and formative assessment ideas.</p>
+                    <p><strong>Beginning Prompt:</strong> Please unpack Virginia Mathematics SOL A.4, including solving systems graphically and algebraically, interpreting intersection points, verifying solutions, and applying systems to practical problems.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Create three student-friendly I Can statements. Identify common misconceptions. Design three engaging classroom activities.</p>
+                  </div>
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-6897d4c96f608191b174cd2c5b6f9305-assistant-analyzing-an-assessment" target="_blank" rel="noopener noreferrer">Assistant: Analyzing an Assessment</a></h5>
+                    <p><strong>Purpose:</strong> Evaluate teacher-created assessments for alignment, cognitive demand, rigor, and balance.</p>
+                    <p><strong>Challenge:</strong> Analyze an Algebra I systems quiz that includes graphing, algebraic solving, vocabulary, practical application, reasoning, true/false, drawing, and unrelated extra credit.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Identify questions to revise or remove. Rewrite the assessment for SOL alignment. Classify each question using Webb's Depth of Knowledge.</p>
+                  </div>
+                </div>
+                <p class="reflection"><strong>Reflection:</strong> Does the assessment truly measure the intent of the standard? Are students explaining thinking or recalling information? How could AI improve common assessments during PLCs?</p>
+              </article>
+
+              <article class="station-panel" id="station-4" role="tabpanel" aria-labelledby="station-tab-4" hidden>
+                <div class="station-header"><span>7 Minutes</span><h4>Station 4: Better Data Conversations</h4></div>
+                <p><strong>Mission:</strong> Turn assessment data into trends, intervention groups, reteaching strategies, and productive PLC conversations.</p>
+                <div class="download-strip">
+                  <a href="assets/workshop-resources/biology-pre-test-performance-matters-sample.xlsx" download>Download Biology Pre-Test</a>
+                  <a href="assets/workshop-resources/biology-benchmark1-performance-matters-sample.xlsx" download>Download Biology Benchmark</a>
+                  <a href="assets/workshop-resources/biology-sol-posttest-performance-matters-sample.xlsx" download>Download Biology SOL Post-Test</a>
+                </div>
+                <div class="station-tool-grid">
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-68f146e55b5c8191a7f734762fadb357-assessment-data-bot" target="_blank" rel="noopener noreferrer">Assessment Data Bot</a></h5>
+                    <p><strong>Purpose:</strong> Analyze assessment data and transform it into actionable instructional recommendations.</p>
+                    <p><strong>Beginning Prompt:</strong> Please analyze the assessment data I uploaded.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Identify strengths and priority needs. Create intervention groups and strategies. Compare pre-test, benchmark, and post-test growth.</p>
+                  </div>
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-6898c7a3fed481919c3cf75d6fd626a7-plc-discussion-prompter-va-sol-edition" target="_blank" rel="noopener noreferrer">PLC Discussion Prompter - Virginia SOL Edition</a></h5>
+                    <p><strong>Purpose:</strong> Transform assessment data into productive PLC conversations focused on instruction and student learning.</p>
+                    <p><strong>Beginning Prompt:</strong> Please use the assessment data I uploaded to create a PLC discussion.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Create a 45-minute PLC agenda. Identify misconceptions and reteaching strategies. Develop a two-week reteaching plan and evidence to monitor progress.</p>
+                  </div>
+                </div>
+                <p class="reflection"><strong>Reflection:</strong> If AI could prepare benchmark analysis, groups, priority standards, and a PLC agenda in minutes, how would that change the conversation?</p>
+              </article>
+
+              <article class="station-panel" id="station-5" role="tabpanel" aria-labelledby="station-tab-5" hidden>
+                <div class="station-header"><span>7 Minutes</span><h4>Station 5: Better Leadership</h4></div>
+                <p><strong>Mission:</strong> Create leadership action plans, walkthrough look-fors, coaching questions, and meeting plans that keep leaders focused on instruction.</p>
+                <div class="station-tool-grid">
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-7dr55WiEf-school-plan-assistant" target="_blank" rel="noopener noreferrer">School Plan Assistant</a></h5>
+                    <p><strong>Purpose:</strong> Develop improvement plans, testing plans, leadership action plans, and implementation timelines aligned to school priorities.</p>
+                    <p><strong>Scenario:</strong> Jefferson High School wants to improve mathematics achievement, student engagement, academic discourse, and instructional rigor based on benchmark data, walkthrough trends, and teacher feedback.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Develop a 30-day action plan. Identify the three highest-impact leadership actions. Create a leadership team meeting agenda.</p>
+                  </div>
+                  <div>
+                    <h5><a href="https://chatgpt.com/g/g-6a349527aef88191bb2db36116a233d0-virginia-instructional-leadership-coach" target="_blank" rel="noopener noreferrer">Virginia Instructional Leadership Coach</a></h5>
+                    <p><strong>Purpose:</strong> Develop a shared instructional vision by identifying evidence of high-quality instruction and strengthening coaching conversations.</p>
+                    <p><strong>Scenario:</strong> Walkthroughs show positive relationships and posted learning targets, with growth needed in student discussion, questioning, formative assessment, productive struggle, and closure.</p>
+                    <p><strong>Follow-Up Prompts:</strong> Develop walkthrough look-fors. Create five coaching questions. Design a faculty learning session.</p>
+                  </div>
+                </div>
+                <p class="reflection"><strong>Reflection:</strong> If AI helped you spend less time writing plans and preparing meetings, how could you reinvest that time to better support teachers and students?</p>
+              </article>
+            </section>
           </div>
         </div>
       </section>

@@ -18,6 +18,11 @@ Then visit `http://localhost:8080` from this folder.
 
 Most website copy is in `index.html`. Search for the section name you want to update, such as `About`, `Services`, `Workshops`, `Resources`, `Testimonials`, or `Contact`.
 
+## Edit Workshop Access Code
+
+The People Over Paperwork workshop resource area uses a simple access code in `script.js`.
+Search for `workshopAccessCode` and replace `peopleoverpaperwork` with the code you want to share with a school.
+
 ## Edit Styles
 
 Colors, spacing, layout, and responsive behavior are in `styles.css`. The main brand colors are defined near the top in the `:root` block.

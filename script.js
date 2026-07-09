@@ -64,6 +64,58 @@ document.querySelectorAll("[data-tool-close]").forEach((button) => {
   });
 });
 
+// Workshop resource access. Change this code when Derek creates a school-specific password.
+const workshopAccessCode = "peopleoverpaperwork";
+const workshopAccessForm = document.querySelector("[data-workshop-access-form]");
+const workshopAccessStatus = document.querySelector("[data-workshop-access-status]");
+const workshopResourceLibrary = document.querySelector("[data-workshop-resource-library]");
+
+if (workshopAccessForm && workshopAccessStatus && workshopResourceLibrary) {
+  workshopAccessForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(workshopAccessForm);
+    const submittedCode = String(formData.get("workshop_password") || "")
+      .trim()
+      .toLowerCase();
+
+    if (submittedCode === workshopAccessCode) {
+      workshopResourceLibrary.hidden = false;
+      workshopAccessStatus.textContent = "Resources unlocked.";
+      workshopAccessStatus.className = "access-status is-success";
+      workshopResourceLibrary.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    workshopAccessStatus.textContent = "That code did not work. Please check the workshop code and try again.";
+    workshopAccessStatus.className = "access-status is-error";
+  });
+}
+
+const stationTabs = document.querySelectorAll("[data-station-tab]");
+
+stationTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const stationId = tab.getAttribute("data-station-tab");
+    const stationPanel = document.getElementById(stationId);
+
+    if (!stationPanel) return;
+
+    stationTabs.forEach((button) => {
+      button.classList.remove("is-active");
+      button.setAttribute("aria-selected", "false");
+    });
+
+    document.querySelectorAll(".station-panel").forEach((panel) => {
+      panel.hidden = true;
+    });
+
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+    stationPanel.hidden = false;
+  });
+});
+
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
