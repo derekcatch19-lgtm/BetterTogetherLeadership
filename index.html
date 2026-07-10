@@ -316,7 +316,8 @@
               <h3>People Over Paperwork Resources</h3>
               <p>
                 Add slides, participant handouts, and follow-up materials here as the workshop
-                library grows. The AI Gallery Walk activity below is ready for participants.
+                library grows. Start in the Activities section to open the AI Gallery Walk or the
+                AI Build Challenge.
               </p>
             </div>
             <div class="resource-folder-grid">
@@ -324,9 +325,29 @@
                 <h4>Slides</h4>
                 <p>Placeholder folder for the workshop slide deck.</p>
               </article>
-              <article class="resource-folder">
+              <article class="resource-folder resource-folder-wide">
                 <h4>Activities</h4>
-                <p>Placeholder folder for participant activities and table prompts.</p>
+                <p>Open hands-on workshop activities for participants.</p>
+                <div class="activity-tile-grid">
+                  <button class="activity-tile gallery-tile" type="button" data-gallery-toggle aria-expanded="false" aria-controls="ai-gallery-walk">
+                    <span class="activity-tile-kicker">Activity</span>
+                    <strong>AI Gallery Walk</strong>
+                    <span>Five practical stations for feedback, lessons, standards, data, and leadership.</span>
+                  </button>
+                  <a
+                    class="activity-tile activity-tile-image"
+                    href="https://docs.google.com/presentation/d/1d-sz_bzmOoXUFY8K-zbfPyfP4BoyTR5PQ5tSsF99C6Y/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="assets/ai-build-mission-possible.png" alt="AI Mission Possible activity graphic" />
+                    <span>
+                      <span class="activity-tile-kicker">Slide Deck</span>
+                      <strong>AI Build Challenge</strong>
+                      <em>Mission Possible</em>
+                    </span>
+                  </a>
+                </div>
               </article>
               <article class="resource-folder">
                 <h4>Sample Data Files</h4>
@@ -337,7 +358,7 @@
               </article>
             </div>
 
-            <section class="gallery-walk" aria-labelledby="gallery-walk-title">
+            <section class="gallery-walk" id="ai-gallery-walk" aria-labelledby="gallery-walk-title" data-gallery-walk hidden>
               <div class="gallery-heading">
                 <p class="eyebrow">AI Gallery Walk Activity</p>
                 <h3 id="gallery-walk-title">Five Stations for Reclaiming Time</h3>

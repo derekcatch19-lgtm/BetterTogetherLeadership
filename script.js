@@ -129,6 +129,25 @@ if (workshopAccessForm && workshopAccessStatus && workshopResourceLibrary) {
   });
 }
 
+const galleryToggle = document.querySelector("[data-gallery-toggle]");
+const galleryWalk = document.querySelector("[data-gallery-walk]");
+
+if (galleryToggle && galleryWalk) {
+  galleryToggle.addEventListener("click", () => {
+    const willOpen = galleryWalk.hidden;
+
+    galleryWalk.hidden = !willOpen;
+    galleryToggle.setAttribute("aria-expanded", String(willOpen));
+    galleryToggle.querySelector("strong").textContent = willOpen
+      ? "Hide AI Gallery Walk"
+      : "AI Gallery Walk";
+
+    if (willOpen) {
+      galleryWalk.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+}
+
 const stationTabs = document.querySelectorAll("[data-station-tab]");
 
 stationTabs.forEach((tab) => {

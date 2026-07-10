@@ -857,6 +857,83 @@ a {
   box-shadow: none;
 }
 
+.resource-folder-wide {
+  grid-column: span 2;
+}
+
+.activity-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.activity-tile {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-height: 190px;
+  padding: 18px;
+  color: var(--navy);
+  background: linear-gradient(180deg, var(--white), var(--carolina-soft));
+  border: 1px solid rgba(89, 163, 216, 0.36);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.activity-tile:hover {
+  color: var(--navy);
+  border-color: var(--carolina);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.activity-tile strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.activity-tile-kicker {
+  color: var(--carolina);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.activity-tile-image {
+  padding: 0;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+
+.activity-tile-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.activity-tile-image > span {
+  display: grid;
+  gap: 5px;
+  padding: 14px 16px 16px;
+}
+
+.activity-tile-image strong,
+.activity-tile-image em {
+  color: var(--white);
+}
+
+.activity-tile-image em {
+  font-style: normal;
+  font-weight: 800;
+}
+
 .resource-folder h4,
 .station-panel h4,
 .station-panel h5 {
@@ -883,6 +960,10 @@ a {
   margin-top: 34px;
   padding-top: 30px;
   border-top: 1px solid var(--gray-300);
+}
+
+.gallery-walk[hidden] {
+  display: none;
 }
 
 .gallery-heading {
@@ -1206,6 +1287,7 @@ a {
   .media-grid,
   .resource-grid,
   .resource-folder-grid,
+  .activity-tile-grid,
   .tool-grid,
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1257,9 +1339,14 @@ a {
   .media-grid,
   .resource-grid,
   .resource-folder-grid,
+  .activity-tile-grid,
   .tool-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .resource-folder-wide {
+    grid-column: auto;
   }
 
   .workshop-resource-library,
