@@ -675,6 +675,17 @@ a {
   color: var(--carolina);
 }
 
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 8px;
+}
+
+.service-actions a {
+  margin-top: 0;
+}
+
 .media-feature {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
