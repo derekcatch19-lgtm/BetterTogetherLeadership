@@ -102,7 +102,7 @@ if (window.location.hash === "#people-over-paperwork") {
 }
 
 // Workshop resource access. Change this code when Derek creates a school-specific password.
-const workshopAccessCode = "peopleoverpaperwork";
+const workshopAccessCode = "sreb26";
 const workshopAccessForm = document.querySelector("[data-workshop-access-form]");
 const workshopAccessStatus = document.querySelector("[data-workshop-access-status]");
 const workshopResourceLibrary = document.querySelector("[data-workshop-resource-library]");

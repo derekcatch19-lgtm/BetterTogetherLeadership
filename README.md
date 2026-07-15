@@ -21,7 +21,8 @@ Most website copy is in `index.html`. Search for the section name you want to up
 ## Edit Workshop Access Code
 
 The People Over Paperwork workshop resource area uses a simple access code in `script.js`.
-Search for `workshopAccessCode` and replace `peopleoverpaperwork` with the code you want to share with a school.
+Search for `workshopAccessCode` and replace `sreb26` with the code you want to share with a school.
+The current shared code is `SREB26`.
 
 ## Edit Styles
 
