@@ -101,8 +101,8 @@ if (window.location.hash === "#people-over-paperwork") {
   openWorkshopSection();
 }
 
-// Workshop resource access. Change this code when Derek creates a school-specific password.
-const workshopAccessCode = "sreb26";
+// Workshop resource access. Add new school-specific codes to this list as needed.
+const workshopAccessCodes = ["sreb26", "culpeper26"];
 const workshopAccessForm = document.querySelector("[data-workshop-access-form]");
 const workshopAccessStatus = document.querySelector("[data-workshop-access-status]");
 const workshopResourceLibrary = document.querySelector("[data-workshop-resource-library]");
@@ -116,7 +116,7 @@ if (workshopAccessForm && workshopAccessStatus && workshopResourceLibrary) {
       .trim()
       .toLowerCase();
 
-    if (submittedCode === workshopAccessCode) {
+    if (workshopAccessCodes.includes(submittedCode)) {
       workshopResourceLibrary.hidden = false;
       workshopAccessStatus.textContent = "Resources unlocked.";
       workshopAccessStatus.className = "access-status is-success";

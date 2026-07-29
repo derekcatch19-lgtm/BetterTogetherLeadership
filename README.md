@@ -18,11 +18,11 @@ Then visit `http://localhost:8080` from this folder.
 
 Most website copy is in `index.html`. Search for the section name you want to update, such as `About`, `Services`, `Workshops`, `Resources`, `Testimonials`, or `Contact`.
 
-## Edit Workshop Access Code
+## Edit Workshop Access Codes
 
 The People Over Paperwork workshop resource area uses a simple access code in `script.js`.
-Search for `workshopAccessCode` and replace `sreb26` with the code you want to share with a school.
-The current shared code is `SREB26`.
+Search for `workshopAccessCodes` and add or remove codes in that list.
+The current shared codes are `SREB26` and `Culpeper26`.
 
 ## Edit Styles
 
