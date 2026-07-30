@@ -832,8 +832,14 @@ a {
 }
 
 .access-status.is-success,
+.access-status.is-pending,
 .access-status.is-error {
   display: block;
+}
+
+.access-status.is-pending {
+  color: var(--navy);
+  background: var(--carolina-soft);
 }
 
 .access-status.is-success {
@@ -965,6 +971,46 @@ a {
 .resource-folder a:hover,
 .download-strip a:hover {
   color: var(--carolina);
+}
+
+.gic-update-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 18px;
+}
+
+.gic-update-card {
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(7, 26, 51, 0.05);
+}
+
+.gic-update-card h4 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.gic-update-card p,
+.update-steps {
+  color: var(--gray-600);
+}
+
+.update-steps {
+  margin: 12px 0 0;
+  padding-left: 22px;
+}
+
+.update-steps li {
+  margin: 8px 0;
+}
+
+.gic-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .gallery-walk {
@@ -1305,6 +1351,10 @@ a {
   }
 
   .station-tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gic-update-layout {
     grid-template-columns: 1fr;
   }
 

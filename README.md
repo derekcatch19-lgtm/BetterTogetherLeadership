@@ -24,6 +24,12 @@ The People Over Paperwork workshop resource area uses a simple access code in `s
 Search for `workshopAccessCodes` and add or remove codes in that list.
 The current shared codes are `SREB26` and `Culpeper26`.
 
+## Edit Graduation Intelligence Center Update Codes
+
+The Graduation Intelligence Center update downloads are served through `api/gic-download.js`.
+Search for `gicAccessCodes` and add or remove school-specific codes in that list.
+The current pilot update code is `Culpeper26`.
+
 ## Edit Styles
 
 Colors, spacing, layout, and responsive behavior are in `styles.css`. The main brand colors are defined near the top in the `:root` block.

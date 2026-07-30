@@ -1129,6 +1129,7 @@
                 class="button button-primary"
                 type="button"
                 data-tool-toggle="ai-tools"
+                data-open-label="Hide AI Tools"
                 aria-controls="ai-tools"
                 aria-expanded="false"
               >
@@ -1152,10 +1153,35 @@
                 class="button button-navy"
                 type="button"
                 data-tool-toggle="leadership-tools"
+                data-open-label="Hide Leadership Tools"
                 aria-controls="leadership-tools"
                 aria-expanded="false"
               >
                 View Leadership Tools
+              </button>
+            </article>
+            <article class="resource-card">
+              <span class="resource-icon">GIC</span>
+              <p class="resource-status">Pilot Update</p>
+              <h3>Graduation Intelligence Center Updates</h3>
+              <p>
+                Secure update downloads for existing pilot installations of the
+                Graduation Intelligence Center.
+              </p>
+              <p>
+                The system helps counselors and administrators monitor
+                graduation requirements, retesting needs, credentials,
+                readiness indicators, and local reporting.
+              </p>
+              <button
+                class="button button-primary"
+                type="button"
+                data-tool-toggle="gic-updates"
+                data-open-label="Hide GIC Updates"
+                aria-controls="gic-updates"
+                aria-expanded="false"
+              >
+                Download Update
               </button>
             </article>
           </div>
@@ -1279,6 +1305,73 @@
                 <article><h5><a href="https://docs.google.com/document/d/1QIboqzSfN30IfWtUuSu2pbFvHRFxs4JTPyUY4Khd4fw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Instructional Rounds - PD Summary</a></h5><p>A structured peer observation model for reflective practice and continuous instructional improvement.</p></article>
                 <article><h5><a href="https://forms.gle/NRC6a7FdMYLSM988A" target="_blank" rel="noopener noreferrer">AHS Welcome Back - Staff Questionnaire</a></h5><p>Captures staff voice, passions, needs, and supports to guide culture-building decisions.</p></article>
               </div>
+            </div>
+          </section>
+
+          <section class="tool-library gic-updates" id="gic-updates" aria-labelledby="gic-updates-title" hidden>
+            <div class="tool-library-heading">
+              <p class="eyebrow">Graduation Intelligence Center</p>
+              <h3 id="gic-updates-title">Pilot 1.2.4 Update</h3>
+              <button class="tool-close" type="button" data-tool-close="gic-updates">Close GIC Updates</button>
+              <p>
+                For existing pilot installations. This download contains
+                application updates only and no student data. Close the
+                Graduation Intelligence Center before installing.
+              </p>
+            </div>
+            <div class="gic-update-layout">
+              <article class="gic-update-card">
+                <h4>About the Graduation Intelligence Center</h4>
+                <p>
+                  The Graduation Intelligence Center is a secure, locally
+                  operated student graduation tracking system designed for
+                  school counselors and administrators. It combines assessment
+                  results, transcripts, verified credits, credentials,
+                  readiness indicators, and local graduation requirements into
+                  clear student profiles and class grids.
+                </p>
+                <p>
+                  The system helps schools identify missing requirements,
+                  monitor retesting needs, create graduation agreements and
+                  checklists, resolve unmatched records, and generate Excel and
+                  PDF reports. School data remains on the school-controlled
+                  computer or district server and is not sent to the developer,
+                  cloud analytics, or external AI services.
+                </p>
+                <p>
+                  The program is currently being piloted with school divisions
+                  to evaluate usability, data accuracy, reporting, and local
+                  implementation.
+                </p>
+              </article>
+              <article class="gic-update-card">
+                <h4>Install the Pilot 1.2.4 Update</h4>
+                <ol class="update-steps">
+                  <li>Download the update ZIP.</li>
+                  <li>Open the downloaded ZIP.</li>
+                  <li>Select everything inside.</li>
+                  <li>Drag it into the existing Graduation Intelligence Center folder.</li>
+                  <li>Choose <strong>Replace the files in the destination</strong>.</li>
+                  <li>Restart the program.</li>
+                  <li>Confirm Release Notes shows <strong>Pilot Edition 1.2.4 - July 29, 2026</strong>.</li>
+                </ol>
+                <form class="access-form gic-download-form" data-gic-download-form>
+                  <label>
+                    School Update Code
+                    <input type="password" name="gic_code" autocomplete="current-password" placeholder="Enter school code" required />
+                  </label>
+                  <p class="access-status" data-gic-download-status aria-live="polite"></p>
+                  <div class="gic-download-actions">
+                    <button class="button button-navy" type="button" data-gic-download="update">
+                      Download Update
+                    </button>
+                    <button class="button button-secondary" type="button" data-gic-download="checksum">
+                      Download SHA256
+                    </button>
+                  </div>
+                </form>
+                <p class="access-note">Current pilot update: Pilot Edition 1.2.4 - July 29, 2026.</p>
+              </article>
             </div>
           </section>
         </div>

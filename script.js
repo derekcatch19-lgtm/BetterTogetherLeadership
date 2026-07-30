@@ -43,7 +43,7 @@ toolToggles.forEach((toggle) => {
     if (willOpen) {
       panel.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
-      toggle.textContent = panelId === "ai-tools" ? "Hide AI Tools" : "Hide Leadership Tools";
+      toggle.textContent = toggle.dataset.openLabel || "Hide Resources";
       panel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
@@ -63,6 +63,82 @@ document.querySelectorAll("[data-tool-close]").forEach((button) => {
     }
   });
 });
+
+const gicDownloadForm = document.querySelector("[data-gic-download-form]");
+const gicDownloadStatus = document.querySelector("[data-gic-download-status]");
+const gicDownloadButtons = document.querySelectorAll("[data-gic-download]");
+
+async function downloadGicFile(fileKey, code, button) {
+  if (!gicDownloadStatus) return;
+
+  const originalLabel = button.textContent;
+  gicDownloadStatus.textContent = "Preparing secure download...";
+  gicDownloadStatus.className = "access-status is-pending";
+  button.disabled = true;
+
+  try {
+    const response = await fetch("/api/gic-download", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code, file: fileKey }),
+    });
+
+    if (!response.ok) {
+      let message = "The update could not be downloaded. Please check the school code.";
+      try {
+        const result = await response.json();
+        message = result.message || message;
+      } catch {
+        // The file route returns JSON only for errors.
+      }
+      throw new Error(message);
+    }
+
+    const blob = await response.blob();
+    const disposition = response.headers.get("Content-Disposition") || "";
+    const filenameMatch = disposition.match(/filename="([^"]+)"/);
+    const filename =
+      filenameMatch?.[1] ||
+      (fileKey === "checksum"
+        ? "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY_SHA256.txt"
+        : "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY.zip");
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+
+    gicDownloadStatus.textContent = "Download started.";
+    gicDownloadStatus.className = "access-status is-success";
+  } catch (error) {
+    gicDownloadStatus.textContent =
+      error.message || "The update could not be downloaded. Please contact Better Together Leadership.";
+    gicDownloadStatus.className = "access-status is-error";
+  } finally {
+    button.disabled = false;
+    button.textContent = originalLabel;
+  }
+}
+
+if (gicDownloadForm && gicDownloadStatus && gicDownloadButtons.length) {
+  gicDownloadButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const formData = new FormData(gicDownloadForm);
+      const code = String(formData.get("gic_code") || "").trim();
+
+      if (!code) {
+        gicDownloadStatus.textContent = "Enter the school update code first.";
+        gicDownloadStatus.className = "access-status is-error";
+        return;
+      }
+
+      downloadGicFile(button.getAttribute("data-gic-download"), code, button);
+    });
+  });
+}
 
 const workshopToggle = document.querySelector("[data-workshop-toggle]");
 const workshopSection = document.querySelector("[data-workshop-section]");
