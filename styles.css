@@ -70,12 +70,12 @@ a {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   color: var(--white);
   background: var(--white);
   border: 1px solid rgba(75, 156, 211, 0.35);
-  border-radius: 8px;
+  border-radius: 50%;
   font-size: 0.9rem;
   letter-spacing: 0;
   overflow: hidden;
@@ -161,6 +161,15 @@ a {
   width: min(var(--max-width), calc(100% - 40px));
   margin: 0 auto;
   padding: 70px 0 92px;
+}
+
+.hero-logo {
+  width: clamp(112px, 13vw, 170px);
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 42px rgba(7, 26, 51, 0.24);
 }
 
 .eyebrow {
@@ -1292,6 +1301,20 @@ a {
   margin: 0;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+}
+
 .footer-inner a {
   color: var(--white);
   font-weight: 800;
@@ -1374,6 +1397,11 @@ a {
     max-width: 210px;
   }
 
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
   .hero {
     min-height: 740px;
   }
@@ -1430,6 +1458,10 @@ a {
   .footer-inner {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
   }
 
   .button {
