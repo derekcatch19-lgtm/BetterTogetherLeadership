@@ -5,11 +5,11 @@ const gicAccessCodes = ["culpeper26"];
 
 const downloadFiles = {
   update: {
-    filename: "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY.zip",
+    filename: "AHS_GIC_Update_1.3.11_2026-09-08.zip",
     contentType: "application/zip",
   },
   checksum: {
-    filename: "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY_SHA256.txt",
+    filename: "AHS_GIC_Update_1.3.11_2026-09-08_SHA256.txt",
     contentType: "text/plain; charset=utf-8",
   },
 };

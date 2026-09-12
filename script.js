@@ -100,8 +100,8 @@ async function downloadGicFile(fileKey, code, button) {
     const filename =
       filenameMatch?.[1] ||
       (fileKey === "checksum"
-        ? "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY_SHA256.txt"
-        : "GIC_Pilot_Edition_1.2.4_July_29_2026_UPDATE_ONLY.zip");
+        ? "AHS_GIC_Update_1.3.11_2026-09-08_SHA256.txt"
+        : "AHS_GIC_Update_1.3.11_2026-09-08.zip");
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
