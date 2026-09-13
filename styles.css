@@ -988,7 +988,23 @@ a {
   gap: 18px;
 }
 
+.tool-suite-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
+  gap: 18px;
+  align-items: start;
+}
+
 .gic-update-card {
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(7, 26, 51, 0.05);
+}
+
+.tool-suite-access-card,
+.tool-suite-card {
   padding: 22px;
   background: var(--white);
   border: 1px solid var(--gray-100);
@@ -1002,7 +1018,16 @@ a {
   font-size: 1.15rem;
 }
 
+.tool-suite-access-card h4,
+.tool-suite-card h4 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
 .gic-update-card p,
+.tool-suite-access-card p,
+.tool-suite-card p,
 .update-steps {
   color: var(--gray-600);
 }
@@ -1020,6 +1045,30 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.tool-suite-library[hidden] {
+  display: none;
+}
+
+.tool-suite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tool-suite-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.tool-suite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .gallery-walk {
@@ -1377,7 +1426,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .gic-update-layout {
+  .gic-update-layout,
+  .tool-suite-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1430,6 +1480,7 @@ a {
   .resource-folder-grid,
   .activity-tile-grid,
   .tool-grid,
+  .tool-suite-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
   }

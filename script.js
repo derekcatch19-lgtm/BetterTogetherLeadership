@@ -140,6 +140,110 @@ if (gicDownloadForm && gicDownloadStatus && gicDownloadButtons.length) {
   });
 }
 
+const toolSuiteAccessForm = document.querySelector("[data-tool-suite-access-form]");
+const toolSuiteStatus = document.querySelector("[data-tool-suite-status]");
+const toolSuiteLibrary = document.querySelector("[data-tool-suite-library]");
+const toolSuiteDownloadButtons = document.querySelectorAll("[data-tool-suite-download]");
+
+const toolSuiteFilenameFallbacks = {
+  "sol-assessment-data-analyzer": "SOL-Assessment-Data-Analyzer-Windows.zip",
+  "powerschool-grade-extractor": "PowerSchool_Grade_Extractor.zip",
+  "math-progress-tracker": "Math-Progress-Tracker-FULL-Geometry-Grade-Safety-v4-2026-09-01.zip",
+  "science-progress-tracker": "Science-Progress-Tracker-COMPLETE-LATEST-Port-5052-2026-09-13.zip",
+  "english-progress-tracker": "English-Progress-Tracker-COMPLETE-LATEST-Port-5053-2026-09-13.zip",
+  "school-communication-hub": "school-communication-hub-starter.zip",
+  "school-communication-hub-readme": "school-communication-hub-starter-README.md",
+};
+
+async function downloadToolSuiteFile(fileKey, code, button) {
+  if (!toolSuiteStatus) return;
+
+  const originalLabel = button.textContent;
+  toolSuiteStatus.textContent = "Preparing secure download...";
+  toolSuiteStatus.className = "access-status is-pending";
+  button.disabled = true;
+
+  try {
+    const response = await fetch("/api/tool-suite-download", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code, file: fileKey }),
+    });
+
+    if (!response.ok) {
+      let message = "The download could not be prepared. Please check the school access code.";
+      try {
+        const result = await response.json();
+        message = result.message || message;
+      } catch {
+        // The file route returns JSON only for errors.
+      }
+      throw new Error(message);
+    }
+
+    const blob = await response.blob();
+    const disposition = response.headers.get("Content-Disposition") || "";
+    const filenameMatch = disposition.match(/filename="([^"]+)"/);
+    const filename = filenameMatch?.[1] || toolSuiteFilenameFallbacks[fileKey] || "better-together-tool.zip";
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+
+    toolSuiteStatus.textContent = "Download started.";
+    toolSuiteStatus.className = "access-status is-success";
+  } catch (error) {
+    toolSuiteStatus.textContent =
+      error.message || "The download could not be prepared. Please contact Better Together Leadership.";
+    toolSuiteStatus.className = "access-status is-error";
+  } finally {
+    button.disabled = false;
+    button.textContent = originalLabel;
+  }
+}
+
+if (toolSuiteAccessForm && toolSuiteStatus && toolSuiteLibrary) {
+  toolSuiteAccessForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(toolSuiteAccessForm);
+    const code = String(formData.get("tool_suite_code") || "").trim();
+
+    if (!code) {
+      toolSuiteLibrary.hidden = true;
+      toolSuiteStatus.textContent = "Enter the school access code first.";
+      toolSuiteStatus.className = "access-status is-error";
+      return;
+    }
+
+    toolSuiteLibrary.hidden = false;
+    toolSuiteStatus.textContent = "Code entered. Choose a download to continue.";
+    toolSuiteStatus.className = "access-status is-success";
+    toolSuiteLibrary.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+if (toolSuiteAccessForm && toolSuiteStatus && toolSuiteDownloadButtons.length) {
+  toolSuiteDownloadButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const formData = new FormData(toolSuiteAccessForm);
+      const code = String(formData.get("tool_suite_code") || "").trim();
+
+      if (!code) {
+        toolSuiteStatus.textContent = "Enter the school access code first.";
+        toolSuiteStatus.className = "access-status is-error";
+        return;
+      }
+
+      downloadToolSuiteFile(button.getAttribute("data-tool-suite-download"), code, button);
+    });
+  });
+}
+
 const workshopToggle = document.querySelector("[data-workshop-toggle]");
 const workshopSection = document.querySelector("[data-workshop-section]");
 

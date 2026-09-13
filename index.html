@@ -1185,6 +1185,31 @@
                 Download Update
               </button>
             </article>
+            <article class="resource-card">
+              <span class="resource-icon">Suite</span>
+              <p class="resource-status">Protected Downloads</p>
+              <h3>School Leadership Tools Suite</h3>
+              <p>
+                Password-protected downloads for pilot schools using local
+                assessment, tracker, grade extraction, and staff communication
+                tools.
+              </p>
+              <p>
+                Each tool is designed to help school teams organize data,
+                streamline daily systems, and keep sensitive student information
+                on the school-controlled device.
+              </p>
+              <button
+                class="button button-navy"
+                type="button"
+                data-tool-toggle="school-tools-suite"
+                data-open-label="Hide Tool Suite"
+                aria-controls="school-tools-suite"
+                aria-expanded="false"
+              >
+                Open Tool Suite
+              </button>
+            </article>
           </div>
 
           <section class="tool-library" id="ai-tools" aria-labelledby="ai-tools-title" hidden>
@@ -1375,6 +1400,129 @@
                 </form>
                 <p class="access-note">Current pilot update: Pilot Edition 1.3.11 - September 8, 2026.</p>
               </article>
+            </div>
+          </section>
+
+          <section class="tool-library tool-suite" id="school-tools-suite" aria-labelledby="school-tools-suite-title" hidden>
+            <div class="tool-library-heading">
+              <p class="eyebrow">Protected Pilot Downloads</p>
+              <h3 id="school-tools-suite-title">School Leadership Tools Suite</h3>
+              <button class="tool-close" type="button" data-tool-close="school-tools-suite">Close Tool Suite</button>
+              <p>
+                This protected area gives approved schools access to local,
+                school-operated tools for assessment analysis, progress
+                tracking, grade extraction, and staff communication systems.
+              </p>
+            </div>
+            <div class="tool-suite-layout">
+              <article class="tool-suite-access-card">
+                <h4>Access Downloads</h4>
+                <p>
+                  Enter the school access code provided by Better Together
+                  Leadership. Downloads are intended for approved pilot or
+                  partner schools.
+                </p>
+                <form class="access-form" data-tool-suite-access-form>
+                  <label>
+                    School Access Code
+                    <input type="password" name="tool_suite_code" autocomplete="current-password" placeholder="Enter school code" required />
+                  </label>
+                  <button class="button button-navy" type="submit">Open Downloads</button>
+                  <p class="access-status" data-tool-suite-status aria-live="polite"></p>
+                </form>
+                <p class="access-note">
+                  Additional school-specific codes can be added in the
+                  protected download route as new partner schools join the
+                  pilot.
+                </p>
+              </article>
+              <div class="tool-suite-library" data-tool-suite-library hidden>
+                <div class="tool-suite-grid">
+                  <article class="tool-suite-card">
+                    <p class="resource-status">Assessment Reports</p>
+                    <h4>SOL Assessment Data Analyzer</h4>
+                    <p>
+                      A local, code-only tool for turning item-level assessment
+                      exports into clean Excel reports with mapped columns,
+                      counts, percentages, teacher and group summaries,
+                      strengths, weaknesses, and optional student-level tabs.
+                    </p>
+                    <p>Student data stays on the user device and is not sent to AI or external services.</p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="sol-assessment-data-analyzer">Download Tool</button>
+                    </div>
+                  </article>
+                  <article class="tool-suite-card">
+                    <p class="resource-status">PowerSchool Export</p>
+                    <h4>PowerSchool Grade Extractor</h4>
+                    <p>
+                      A standalone Windows application that converts a
+                      PowerSchool Student Schedule Listing PDF into a formatted
+                      Excel workbook with course, teacher, grade, period,
+                      summary, distribution, and review worksheets.
+                    </p>
+                    <p>No Python installation, cloud service, or internet connection is required.</p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="powerschool-grade-extractor">Download Tool</button>
+                    </div>
+                  </article>
+                  <article class="tool-suite-card">
+                    <p class="resource-status">Math Tracker</p>
+                    <h4>Math Progress Tracker</h4>
+                    <p>
+                      A locally hosted tracker for math rosters, historical and
+                      current SOL scores, pre-tests, benchmarks, post-tests,
+                      course grades, imports, student matching, predictions,
+                      color-coded levels, recommendations, and backups.
+                    </p>
+                    <p>Uploaded student data is processed locally and is not sent to AI.</p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="math-progress-tracker">Download Tool</button>
+                    </div>
+                  </article>
+                  <article class="tool-suite-card">
+                    <p class="resource-status">Science Tracker</p>
+                    <h4>Science Progress Tracker</h4>
+                    <p>
+                      A shared, secure tracker for Science rosters, historical
+                      SOL scores, pretests, benchmarks, grades, and student
+                      progress across multiple Science courses.
+                    </p>
+                    <p>Supports Excel and CSV imports, yearlong classes, configurable assessments, and color-coded results.</p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="science-progress-tracker">Download Tool</button>
+                    </div>
+                  </article>
+                  <article class="tool-suite-card">
+                    <p class="resource-status">English Tracker</p>
+                    <h4>English Progress Tracker</h4>
+                    <p>
+                      A shared, secure tracker for English 9-12 and
+                      dual-enrollment courses with Reading and Writing SOL
+                      history, pretests, benchmarks, post-tests, grades, and
+                      Grade 11 EOC Reading readiness.
+                    </p>
+                    <p>Includes Excel and CSV imports with color-coded progress views.</p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="english-progress-tracker">Download Tool</button>
+                    </div>
+                  </article>
+                  <article class="tool-suite-card">
+                    <p class="resource-status">Staff Systems</p>
+                    <h4>School Communication Hub</h4>
+                    <p>
+                      A central staff hub for announcements, submissions,
+                      approvals, presenter mode, staff resources, forms,
+                      contacts, handbook materials, calendars, instructional
+                      tools, and new-teacher support.
+                    </p>
+                    <div class="tool-suite-actions">
+                      <button class="button button-primary" type="button" data-tool-suite-download="school-communication-hub">Download Tool</button>
+                      <button class="button button-secondary" type="button" data-tool-suite-download="school-communication-hub-readme">Download README</button>
+                    </div>
+                  </article>
+                </div>
+              </div>
             </div>
           </section>
         </div>
