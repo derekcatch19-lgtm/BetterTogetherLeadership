@@ -25,14 +25,6 @@ const downloadFiles = {
     filename: "English-Progress-Tracker-COMPLETE-LATEST-Port-5053-2026-09-13.zip",
     contentType: "application/zip",
   },
-  "school-communication-hub": {
-    filename: "school-communication-hub-starter.zip",
-    contentType: "application/zip",
-  },
-  "school-communication-hub-readme": {
-    filename: "school-communication-hub-starter-README.md",
-    contentType: "text/markdown; charset=utf-8",
-  },
 };
 
 function clean(value, maxLength = 200) {

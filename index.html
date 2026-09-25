@@ -1163,11 +1163,11 @@
             </article>
             <article class="resource-card">
               <span class="resource-icon">GIC</span>
-              <p class="resource-status">Pilot Update</p>
-              <h3>Graduation Intelligence Center Updates</h3>
+              <p class="resource-status">Protected Pilot Downloads</p>
+              <h3>Graduation Intelligence Center</h3>
               <p>
-                Secure update downloads for existing pilot installations of the
-                Graduation Intelligence Center.
+                Secure full-install and update downloads for approved schools
+                using the Graduation Intelligence Center.
               </p>
               <p>
                 The system helps counselors and administrators monitor
@@ -1182,7 +1182,7 @@
                 aria-controls="gic-updates"
                 aria-expanded="false"
               >
-                Download Update
+                Open Downloads
               </button>
             </article>
             <article class="resource-card">
@@ -1191,8 +1191,7 @@
               <h3>School Leadership Tools Suite</h3>
               <p>
                 Password-protected downloads for pilot schools using local
-                assessment, tracker, grade extraction, and staff communication
-                tools.
+                assessment, tracker, and grade extraction tools.
               </p>
               <p>
                 Each tool is designed to help school teams organize data,
@@ -1337,12 +1336,13 @@
           <section class="tool-library gic-updates" id="gic-updates" aria-labelledby="gic-updates-title" hidden>
             <div class="tool-library-heading">
               <p class="eyebrow">Graduation Intelligence Center</p>
-              <h3 id="gic-updates-title">Pilot 1.3.11 Update</h3>
-              <button class="tool-close" type="button" data-tool-close="gic-updates">Close GIC Updates</button>
+              <h3 id="gic-updates-title">Version 2.0 RC3 Downloads</h3>
+              <button class="tool-close" type="button" data-tool-close="gic-updates">Close GIC Downloads</button>
               <p>
-                For existing pilot installations. This download contains
-                application updates only and no student data. Close the
-                Graduation Intelligence Center before installing.
+                Approved schools can download a complete portable installation
+                or update an existing Graduation Intelligence Center installation.
+                Both downloads require the school access code provided by Better
+                Together Leadership.
               </p>
             </div>
             <div class="gic-update-layout">
@@ -1371,34 +1371,45 @@
                 </p>
               </article>
               <article class="gic-update-card">
-                <h4>Install the Pilot 1.3.11 Update</h4>
+                <h4>Choose the Correct Download</h4>
+                <p>
+                  <strong>New schools:</strong> Download the Version 2.0 RC3
+                  Portable Full Install package. This includes the files needed
+                  for a new portable installation.
+                </p>
+                <p>
+                  <strong>Existing schools:</strong> Download the Version 2.0
+                  RC3 Update package and follow the steps below. This package is
+                  for schools that already have the Graduation Intelligence
+                  Center installed.
+                </p>
                 <ol class="update-steps">
                   <li>Close the Graduation Intelligence Center and its black server window.</li>
-                  <li>Download the <strong>Pilot 1.3.11 Update Only ZIP</strong>.</li>
+                  <li>Download the <strong>Version 2.0 RC3 Update for Existing Schools ZIP</strong>.</li>
                   <li>Open the ZIP in File Explorer.</li>
                   <li>Select everything inside with Ctrl+A.</li>
                   <li>Drag those items into the existing Graduation Intelligence Center folder containing application, runtime, and school_data.</li>
                   <li>Choose <strong>Replace the files in the destination</strong>.</li>
                   <li>Do <strong>not</strong> delete or replace the school_data folder.</li>
                   <li>Restart using <strong>Start Graduation Intelligence Center.bat</strong>.</li>
-                  <li>Open <strong>Release Notes</strong> and confirm <strong>Pilot Edition 1.3.11 - September 8, 2026</strong>.</li>
+                  <li>Open <strong>Release Notes</strong> and confirm the Version 2.0 RC3 release.</li>
                 </ol>
                 <form class="access-form gic-download-form" data-gic-download-form>
                   <label>
-                    School Update Code
+                    School Access Code
                     <input type="password" name="gic_code" autocomplete="current-password" placeholder="Enter school code" required />
                   </label>
                   <p class="access-status" data-gic-download-status aria-live="polite"></p>
                   <div class="gic-download-actions">
-                    <button class="button button-navy" type="button" data-gic-download="update">
-                      Download Update
+                    <button class="button button-primary" type="button" data-gic-download="full-install">
+                      Download Full Install
                     </button>
-                    <button class="button button-secondary" type="button" data-gic-download="checksum">
-                      Download SHA256
+                    <button class="button button-navy" type="button" data-gic-download="update">
+                      Download Existing-School Update
                     </button>
                   </div>
                 </form>
-                <p class="access-note">Current pilot update: Pilot Edition 1.3.11 - September 8, 2026.</p>
+                <p class="access-note">Current protected release: Graduation Intelligence Center Version 2.0 RC3.</p>
               </article>
             </div>
           </section>
@@ -1411,7 +1422,7 @@
               <p>
                 This protected area gives approved schools access to local,
                 school-operated tools for assessment analysis, progress
-                tracking, grade extraction, and staff communication systems.
+                tracking, and grade extraction systems.
               </p>
             </div>
             <div class="tool-suite-layout">
@@ -1505,20 +1516,6 @@
                     <p>Includes Excel and CSV imports with color-coded progress views.</p>
                     <div class="tool-suite-actions">
                       <button class="button button-primary" type="button" data-tool-suite-download="english-progress-tracker">Download Tool</button>
-                    </div>
-                  </article>
-                  <article class="tool-suite-card">
-                    <p class="resource-status">Staff Systems</p>
-                    <h4>School Communication Hub</h4>
-                    <p>
-                      A central staff hub for announcements, submissions,
-                      approvals, presenter mode, staff resources, forms,
-                      contacts, handbook materials, calendars, instructional
-                      tools, and new-teacher support.
-                    </p>
-                    <div class="tool-suite-actions">
-                      <button class="button button-primary" type="button" data-tool-suite-download="school-communication-hub">Download Tool</button>
-                      <button class="button button-secondary" type="button" data-tool-suite-download="school-communication-hub-readme">Download README</button>
                     </div>
                   </article>
                 </div>

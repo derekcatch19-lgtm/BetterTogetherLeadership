@@ -4,13 +4,13 @@ import path from "node:path";
 const gicAccessCodes = ["culpeper26"];
 
 const downloadFiles = {
-  update: {
-    filename: "AHS_GIC_Update_1.3.11_2026-09-08.zip",
+  "full-install": {
+    filename: "GIC_2_0_RC3_Portable_Full_Install.zip",
     contentType: "application/zip",
   },
-  checksum: {
-    filename: "AHS_GIC_Update_1.3.11_2026-09-08_SHA256.txt",
-    contentType: "text/plain; charset=utf-8",
+  update: {
+    filename: "GIC_2_0_RC3_Update_Existing_Schools.zip",
+    contentType: "application/zip",
   },
 };
 

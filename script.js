@@ -99,9 +99,9 @@ async function downloadGicFile(fileKey, code, button) {
     const filenameMatch = disposition.match(/filename="([^"]+)"/);
     const filename =
       filenameMatch?.[1] ||
-      (fileKey === "checksum"
-        ? "AHS_GIC_Update_1.3.11_2026-09-08_SHA256.txt"
-        : "AHS_GIC_Update_1.3.11_2026-09-08.zip");
+      (fileKey === "full-install"
+        ? "GIC_2_0_RC3_Portable_Full_Install.zip"
+        : "GIC_2_0_RC3_Update_Existing_Schools.zip");
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -151,8 +151,6 @@ const toolSuiteFilenameFallbacks = {
   "math-progress-tracker": "Math-Progress-Tracker-FULL-Geometry-Grade-Safety-v4-2026-09-01.zip",
   "science-progress-tracker": "Science-Progress-Tracker-COMPLETE-LATEST-Port-5052-2026-09-13.zip",
   "english-progress-tracker": "English-Progress-Tracker-COMPLETE-LATEST-Port-5053-2026-09-13.zip",
-  "school-communication-hub": "school-communication-hub-starter.zip",
-  "school-communication-hub-readme": "school-communication-hub-starter-README.md",
 };
 
 async function downloadToolSuiteFile(fileKey, code, button) {
