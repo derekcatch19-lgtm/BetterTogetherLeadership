@@ -1047,6 +1047,18 @@ a {
   gap: 10px;
 }
 
+.gic-download-actions .button-secondary {
+  color: var(--navy);
+  border-color: var(--gray-300);
+  background: var(--gray-50);
+}
+
+.gic-download-actions .button-secondary:hover {
+  color: var(--white);
+  border-color: var(--navy);
+  background: var(--navy);
+}
+
 .tool-suite-library[hidden] {
   display: none;
 }
