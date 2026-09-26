@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-const gicAccessCodes = ["culpeper26"];
+const gicAccessCodes = ["culpeper26", "bathbt2026"];
 
 const downloadFiles = {
   "full-install": {
