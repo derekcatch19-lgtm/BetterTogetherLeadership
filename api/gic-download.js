@@ -12,6 +12,14 @@ const downloadFiles = {
     filename: "GIC_2_0_RC3_Update_Existing_Schools.zip",
     contentType: "application/zip",
   },
+  "user-guide": {
+    filename: "Graduation Intelligence Center 2.0 Illustrated User Guide.pdf",
+    contentType: "application/pdf",
+  },
+  "upload-cheat-sheet": {
+    filename: "GIC School Upload Cheat Sheet.docx",
+    contentType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  },
 };
 
 function clean(value, maxLength = 200) {
