@@ -5,11 +5,11 @@ const gicAccessCodes = ["culpeper26", "bathbt2026"];
 
 const downloadFiles = {
   "full-install": {
-    filename: "GIC_2_0_RC3_Portable_Full_Install.zip",
+    filename: "GIC_2_0_RC8_1_Portable_Full_Install.zip",
     contentType: "application/zip",
   },
   update: {
-    filename: "GIC_2_0_RC3_Update_Existing_Schools.zip",
+    filename: "GIC_2_0_RC8_1_Update_Existing_Schools.zip",
     contentType: "application/zip",
   },
   "user-guide": {
