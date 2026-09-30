@@ -14,15 +14,15 @@ const downloadFiles = {
     contentType: "application/zip",
   },
   "math-progress-tracker": {
-    filename: "Math-Progress-Tracker-FULL-Geometry-Grade-Safety-v4-2026-09-01.zip",
+    filename: "Math Tracker.zip",
     contentType: "application/zip",
   },
   "science-progress-tracker": {
-    filename: "Science-Progress-Tracker-COMPLETE-LATEST-Port-5052-2026-09-13.zip",
+    filename: "Science Tracker.zip",
     contentType: "application/zip",
   },
   "english-progress-tracker": {
-    filename: "English-Progress-Tracker-COMPLETE-LATEST-Port-5053-2026-09-13.zip",
+    filename: "English Tracker.zip",
     contentType: "application/zip",
   },
 };

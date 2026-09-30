@@ -151,9 +151,9 @@ const toolSuiteDownloadButtons = document.querySelectorAll("[data-tool-suite-dow
 const toolSuiteFilenameFallbacks = {
   "sol-assessment-data-analyzer": "SOL-Assessment-Data-Analyzer-Windows.zip",
   "powerschool-grade-extractor": "PowerSchool_Grade_Extractor.zip",
-  "math-progress-tracker": "Math-Progress-Tracker-FULL-Geometry-Grade-Safety-v4-2026-09-01.zip",
-  "science-progress-tracker": "Science-Progress-Tracker-COMPLETE-LATEST-Port-5052-2026-09-13.zip",
-  "english-progress-tracker": "English-Progress-Tracker-COMPLETE-LATEST-Port-5053-2026-09-13.zip",
+  "math-progress-tracker": "Math Tracker.zip",
+  "science-progress-tracker": "Science Tracker.zip",
+  "english-progress-tracker": "English Tracker.zip",
 };
 
 async function downloadToolSuiteFile(fileKey, code, button) {
