@@ -69,8 +69,8 @@ const gicDownloadStatus = document.querySelector("[data-gic-download-status]");
 const gicDownloadButtons = document.querySelectorAll("[data-gic-download]");
 
 const gicFilenameFallbacks = {
-  "full-install": "GIC_2_0_RC8_11_Portable_Full_Install.zip",
-  update: "GIC_2_0_RC8_11_Update_Existing_Schools.zip",
+  "full-install": "GIC_2_0_RC8_13_Portable_Full_Install.zip",
+  update: "GIC_2_0_RC8_13_Update_Existing_Schools.zip",
   "user-guide": "Graduation Intelligence Center 2.0 Illustrated User Guide.pdf",
   "upload-cheat-sheet": "GIC School Upload Cheat Sheet.docx",
 };
@@ -149,8 +149,8 @@ const toolSuiteLibrary = document.querySelector("[data-tool-suite-library]");
 const toolSuiteDownloadButtons = document.querySelectorAll("[data-tool-suite-download]");
 
 const toolSuiteFilenameFallbacks = {
-  "sol-assessment-data-analyzer": "SOL-Assessment-Data-Analyzer-Windows.zip",
-  "powerschool-grade-extractor": "PowerSchool_Grade_Extractor.zip",
+  "sol-assessment-data-analyzer": "SOL-Assessment-Data-Analyzer-Standalone-Windows.zip",
+  "powerschool-grade-extractor": "PowerSchool_Grade_Extractor_All_Levels.zip",
   "math-progress-tracker": "Math Tracker.zip",
   "science-progress-tracker": "Science Tracker.zip",
   "english-progress-tracker": "English Tracker.zip",

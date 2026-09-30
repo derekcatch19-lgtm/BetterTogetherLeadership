@@ -2,15 +2,15 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 // Add new school-specific access codes here as additional schools join the pilot.
-const toolSuiteAccessCodes = ["bathbt2026"];
+const toolSuiteAccessCodes = ["bathbt2026", "alleghanybt2026"];
 
 const downloadFiles = {
   "sol-assessment-data-analyzer": {
-    filename: "SOL-Assessment-Data-Analyzer-Windows.zip",
+    filename: "SOL-Assessment-Data-Analyzer-Standalone-Windows.zip",
     contentType: "application/zip",
   },
   "powerschool-grade-extractor": {
-    filename: "PowerSchool_Grade_Extractor.zip",
+    filename: "PowerSchool_Grade_Extractor_All_Levels.zip",
     contentType: "application/zip",
   },
   "math-progress-tracker": {
