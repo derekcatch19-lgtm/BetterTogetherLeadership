@@ -69,8 +69,8 @@ const gicDownloadStatus = document.querySelector("[data-gic-download-status]");
 const gicDownloadButtons = document.querySelectorAll("[data-gic-download]");
 
 const gicFilenameFallbacks = {
-  "full-install": "GIC_2_0_RC8_1_Portable_Full_Install.zip",
-  update: "GIC_2_0_RC8_1_Update_Existing_Schools.zip",
+  "full-install": "GIC_2_0_RC8_11_Portable_Full_Install.zip",
+  update: "GIC_2_0_RC8_11_Update_Existing_Schools.zip",
   "user-guide": "Graduation Intelligence Center 2.0 Illustrated User Guide.pdf",
   "upload-cheat-sheet": "GIC School Upload Cheat Sheet.docx",
 };
