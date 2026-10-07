@@ -9,7 +9,7 @@ const downloadFiles = {
     contentType: "application/zip",
   },
   update: {
-    filename: "GIC_2_0_RC8_13_Update_Existing_Schools.zip",
+    filename: "GIC_2_0_RC8_28_Update_Existing_Schools.zip",
     contentType: "application/zip",
   },
   "user-guide": {

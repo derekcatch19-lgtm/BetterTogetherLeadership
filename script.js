@@ -70,7 +70,7 @@ const gicDownloadButtons = document.querySelectorAll("[data-gic-download]");
 
 const gicFilenameFallbacks = {
   "full-install": "GIC_2_0_RC8_13_Portable_Full_Install.zip",
-  update: "GIC_2_0_RC8_13_Update_Existing_Schools.zip",
+  update: "GIC_2_0_RC8_28_Update_Existing_Schools.zip",
   "user-guide": "Graduation Intelligence Center 2.0 Illustrated User Guide.pdf",
   "upload-cheat-sheet": "GIC School Upload Cheat Sheet.docx",
 };
