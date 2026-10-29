@@ -5,7 +5,7 @@ const gicAccessCodes = ["culpeper26", "bathbt2026"];
 
 const downloadFiles = {
   "full-install": {
-    filename: "GIC_2_0_RC8_13_Portable_Full_Install.zip",
+    filename: "GIC_2_0_RC8_32_Portable_Full_Install.zip",
     contentType: "application/zip",
   },
   update: {
